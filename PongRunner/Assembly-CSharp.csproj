@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\BallBehaviour.cs" />
     <Compile Include="Assets\Scripts\ExpandPaddle.cs" />
     <Compile Include="Assets\Scripts\FollowMouse.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\PaddleRotation.cs" />
     <Compile Include="Assets\Scripts\SlowTime.cs" />
     <Reference Include="Unity.Timeline.Editor">

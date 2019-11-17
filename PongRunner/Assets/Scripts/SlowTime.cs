@@ -11,7 +11,6 @@ public class SlowTime : MonoBehaviour
         if (other.CompareTag("Ball"))
         {
             upgrade = true;
-            Destroy(gameObject);
         }
     }
 
@@ -19,19 +18,19 @@ public class SlowTime : MonoBehaviour
     {
         if (upgrade == true)
         {
-            Time.timeScale = 0.5f;
-            System.Threading.Thread.Sleep(5000);
-            Time.timeScale = 1.0f;
+            if (Time.timeScale == 1.0f)
+                {
+                    Time.timeScale = 0.5f;
+                    Time.fixedDeltaTime = 0.02f * Time.timeScale;
+                    destroy();
+            }
         }
-
-        else
-        {
-            Time.timeScale = 1.0f;
-        }
+            
 
     }
 
     void destroy()
     {
+        Destroy(gameObject);
     }
 }
