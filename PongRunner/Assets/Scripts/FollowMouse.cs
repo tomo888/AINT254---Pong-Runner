@@ -5,14 +5,16 @@ using UnityEngine;
 public class FollowMouse : MonoBehaviour
 {
     public float zPosition;
+    public Rigidbody rb;
+    public float thrust;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,zPosition));
+        rb.AddForce(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,zPosition)) * thrust);
     }
 }
