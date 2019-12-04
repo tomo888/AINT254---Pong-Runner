@@ -13,7 +13,7 @@ public class FollowMouse : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         rb.AddForce(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,zPosition)) * thrust);
     }

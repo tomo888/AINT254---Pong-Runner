@@ -66,9 +66,10 @@
     <Compile Include="Assets\Scripts\BallBehaviour.cs" />
     <Compile Include="Assets\Scripts\ExpandPaddle.cs" />
     <Compile Include="Assets\Scripts\FollowMouse.cs" />
-    <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\LifeSystem.cs" />
     <Compile Include="Assets\Scripts\PaddleRotation.cs" />
     <Compile Include="Assets\Scripts\PrototypeFollowMouse.cs" />
+    <Compile Include="Assets\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Scripts\SlowTime.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Student/AINT254---Pong-Runner/PongRunner/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

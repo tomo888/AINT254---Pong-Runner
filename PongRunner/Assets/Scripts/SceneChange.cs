@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class GameOver : MonoBehaviour
+public class SceneChange : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
