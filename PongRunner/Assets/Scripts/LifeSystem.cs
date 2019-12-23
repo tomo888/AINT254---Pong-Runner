@@ -2,29 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LifeSystem : MonoBehaviour
 {
 
-    public int lives = 3;
+    public static int totalLives = 3;
+    public int livesRemaining = totalLives;
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
+
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle"))
         {
-            if (lives <= 0)
+            lifeAway();
+            if (totalLives <= 0)
             {
                 gameOver();
             }
 
             else
             {
-                lifeAway();
-                Debug.Log("Life gone. Lives remaining: " + lives);
+                Debug.Log("Life gone. Lives remaining: " + totalLives);
             }
 
         }
 
+    }
+
+    private void Update()
+    {
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < totalLives)
+            {
+                hearts[i].enabled = true;
+            }
+
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
     }
     //need to destroy obstacle - look at ExpandPaddle
     void destroy()
@@ -34,8 +56,8 @@ public class LifeSystem : MonoBehaviour
 
     int lifeAway()
     {
-        lives -= 1;
-        return lives;
+        totalLives -= 1;
+        return totalLives;
     }
     void gameOver()
     {
