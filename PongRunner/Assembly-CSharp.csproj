@@ -77,11 +77,13 @@
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\LifeSystem.cs" />
     <Compile Include="Assets\Scripts\PaddleRotation.cs" />
+    <Compile Include="Assets\Scripts\PixelateImageEffect.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PrototypeFollowMouse.cs" />
     <Compile Include="Assets\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Scripts\SlowTime.cs" />
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+    <None Include="Assets\Shaders\PixelateImageEffect.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Student/AINT254---Pong-Runner/PongRunner/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

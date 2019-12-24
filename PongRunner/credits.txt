@@ -1,1 +1,18 @@
-https://www.deviantart.com/yukikootomiye/art/Sprites-Heart-Life-641296172
+https://www.deviantart.com/yukikootomiye/art/Sprites-Heart-Life-641296172 - heart sprites
+
+https://freesound.org/people/BloodPixel/sounds/489557/ - gameplay music
+
+https://freesound.org/people/B_Sean/sounds/421886/ - main menu music
+
+https://freesound.org/people/harrietniamh/sounds/415079/ - death sound
+
+https://freesound.org/people/jeckkech/sounds/391658/ - wall collide
+
+https://freesound.org/people/AbbasGamez/sounds/411443/ - paddle collide
+
+https://freesound.org/people/Joao_Janz/sounds/478338/ - power up
+
+https://freesound.org/people/anbo/sounds/34458/ - UI click
+
+https://freesound.org/people/LittleRobotSoundFactory/sounds/290419/ - UI mouse hover over
+
