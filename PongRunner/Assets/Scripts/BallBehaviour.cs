@@ -7,7 +7,6 @@ public class BallBehaviour : MonoBehaviour
 {
 
     public Vector3 initialImpulse;
-
     // Start is called before the first frame update
     void Start()
     {
