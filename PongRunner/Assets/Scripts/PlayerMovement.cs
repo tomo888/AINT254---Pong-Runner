@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
+    public bool buttonDown = false;
+    public int paddleRotationPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,29 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
-        Vector3 move = transform.right * x;
+        Vector3 move = Vector3.right * x;
 
         controller.Move(move * speed * Time.deltaTime);
+
+        if (Input.GetMouseButtonDown(0) && buttonDown == false && paddleRotationPosition != -1)
+        {
+            transform.Rotate(0, -45, 0);
+            buttonDown = true;
+            paddleRotationPosition -= 1;
+        }
+
+        else if (Input.GetMouseButtonDown(1) && buttonDown == false && paddleRotationPosition != 1)
+        {
+            transform.Rotate(0, 45, 0);
+            buttonDown = true;
+            paddleRotationPosition += 1;
+        }
+
+        else
+        {
+            transform.Rotate(0, 0, 0);
+            buttonDown = false;
+        }
+
     }
 }

@@ -8,10 +8,11 @@ public class LifeSystem : MonoBehaviour
 {
 
     public int totalLives = 3;
-    public static int livesRemaining = 3;
+    public static int livesRemaining = 1;
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public GameObject paddle;
 
     void OnTriggerEnter(Collider other)
     {
@@ -74,6 +75,7 @@ public class LifeSystem : MonoBehaviour
     }
     IEnumerator gameOver()
     {
+        paddle.GetComponent<PlayerMovement>().enabled = false;
         Debug.Log("Game Over");
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("GameOver");
