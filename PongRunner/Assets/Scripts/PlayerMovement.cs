@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 12f;
     public bool buttonDown = false;
-    public int paddleRotationPosition;
+    public int paddleRotationPosition = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         Vector3 move = Vector3.right * x;
-
         controller.Move(move * speed * Time.deltaTime);
 
         if (Input.GetMouseButtonDown(0) && buttonDown == false && paddleRotationPosition != -1)

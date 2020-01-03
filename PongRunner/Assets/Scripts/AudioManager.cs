@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource powerUpCollide;
     public AudioSource obstacleCollide;
     public AudioSource gameOverAudio;
+    public GameObject ball;
 
     void Start()
     {
@@ -37,7 +38,7 @@ public class AudioManager : MonoBehaviour
 
         else if (other.CompareTag("Obstacle"))
         {
-            if (LifeSystem.livesRemaining != 0)
+            if (ball.GetComponent<LifeSystem>().livesRemaining != 0)
             {
                 Debug.Log("Obstacle hit!");
                 obstacleCollide.Play();

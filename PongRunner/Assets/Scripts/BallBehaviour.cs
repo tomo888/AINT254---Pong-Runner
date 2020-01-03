@@ -21,6 +21,5 @@ public class BallBehaviour : MonoBehaviour
         {
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
-        Debug.Log("Speed: " + rb.velocity);
     }
 }

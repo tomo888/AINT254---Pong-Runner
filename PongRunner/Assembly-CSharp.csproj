@@ -73,7 +73,9 @@
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BallBehaviour.cs" />
+    <Compile Include="Assets\Scripts\DoublePaddle.cs" />
     <Compile Include="Assets\Scripts\ExpandPaddle.cs" />
+    <Compile Include="Assets\Scripts\ExtraLife.cs" />
     <Compile Include="Assets\Scripts\FollowMouse.cs" />
     <Compile Include="Assets\Scripts\LifeSystem.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />

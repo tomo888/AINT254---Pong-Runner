@@ -8,7 +8,7 @@ public class LifeSystem : MonoBehaviour
 {
 
     public int totalLives = 3;
-    public static int livesRemaining = 1;
+    public int livesRemaining = 3;
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
