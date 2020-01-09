@@ -17,3 +17,36 @@ https://freesound.org/people/anbo/sounds/34458/ - UI click
 https://freesound.org/people/LittleRobotSoundFactory/sounds/290419/ - UI mouse hover over
 
 https://freesound.org/people/Breviceps/sounds/450616/ - obstacle collision
+
+https://pixabay.com/illustrations/under-construction-construction-sign-2408066/ - construction image
+
+
+
+---
+
+
+how hard do you find the level
+- too hard; obstacles from left impossible to predict, too fast, swivelling too hard to manouvere past
+
+how long should powerups last for
+
+should the paddle be able to rotate?
+- overwhelmingly yes
+
+should the player lose a life if the ball hits the bottom wall?
+= no, too hard
+
+any bugs?
+- ball goes too fast when hit at certain angle
+
+- ball appears very jittery when moving
+
+= ball stops when hit at certain angle
+
+- ball rebounds off of something that isn't the wall (invisible walls glitch)
+
+any improvements?
+
+= bug fixing
+= add countdown timer 
+- make levels shorter

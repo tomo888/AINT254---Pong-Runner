@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    /**this class is responsible for allowing the player to use the W&D keys to move
+     * left and right respectively, as well as use the left and right mouse buttons
+     * to rotate the paddle in the corresponding direction.**/
     public CharacterController controller;
 
     public float speed = 12f;
     public bool buttonDown = false;
     public int paddleRotationPosition = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         float x = Input.GetAxis("Horizontal");

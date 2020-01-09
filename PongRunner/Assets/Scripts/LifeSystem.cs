@@ -7,13 +7,19 @@ using UnityEngine.UI;
 public class LifeSystem : MonoBehaviour
 {
 
+    /**this class is responsible for dictacting the amount of lives the player
+     * starts with; storing how many lives they have left; handling the change to 
+     * the player's health UI; and disabling player control and letting the SceneChange
+     * script know the player has failed.**/
+
     public int totalLives = 3;
     public int livesRemaining = 3;
+    public bool IsDead = false;
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public GameObject paddle;
-
+    public GameObject deathEffect;
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle"))
@@ -22,7 +28,7 @@ public class LifeSystem : MonoBehaviour
 
             if (livesRemaining <= 0)
             {
-                StartCoroutine(gameOver());
+                StartCoroutine(GameOver());
             }
 
             else
@@ -73,11 +79,15 @@ public class LifeSystem : MonoBehaviour
         livesRemaining -= 1;
         return livesRemaining;
     }
-    IEnumerator gameOver()
+    IEnumerator GameOver()
     {
+        Instantiate(deathEffect, transform.position, transform.rotation);
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+        GetComponent<TrailRenderer>().enabled = false;
         paddle.GetComponent<PlayerMovement>().enabled = false;
         Debug.Log("Game Over");
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("GameOver");
+        IsDead = true;
     }
 }

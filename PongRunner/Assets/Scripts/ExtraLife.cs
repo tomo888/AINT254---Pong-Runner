@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ExtraLife : MonoBehaviour
 {
+    /**this method handles the power up's visual effects, effects on gameplay
+    * as well as having an in-built timer.**/
     public GameObject pickupEffect;
     public GameObject ball;
     void OnTriggerEnter(Collider other)

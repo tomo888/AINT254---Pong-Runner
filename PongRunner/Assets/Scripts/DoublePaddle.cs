@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class DoublePaddle : MonoBehaviour
 {
-    public GameObject pickupEffect;
+    /**this method handles the power up's visual effects, effects on gameplay
+     * as well as having an in-built timer.**/
+    public GameObject pickupEffect; //visual effect
     public GameObject normalPaddle;
     public GameObject doublePaddle1;
     public GameObject doublePaddle2;
+    //all paddle objects located in empty 'Paddles' GameObject in level's scene
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))

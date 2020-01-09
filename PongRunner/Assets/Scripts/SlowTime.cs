@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SlowTime : MonoBehaviour
 {
+    /**this method handles the power up's visual effects, effects on gameplay
+    * as well as having an in-built timer.**/
     public bool upgrade = false;
     public GameObject paddle;
     public GameObject pickupEffect;
@@ -14,13 +16,6 @@ public class SlowTime : MonoBehaviour
             upgrade = true;
             StartCoroutine(Timer());
         }
-    }
-
-    void Update()
-    {
-
-            
-
     }
     IEnumerator Timer()
     {

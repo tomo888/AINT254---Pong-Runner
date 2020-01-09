@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ExpandPaddle : MonoBehaviour
 {
-    public float multiplier = 2.0f;
-    public GameObject pickupEffect;
+    /**this method handles the power up's visual effects, effects on gameplay
+     * as well as having an in-built timer.**/
+    public float multiplier = 2.0f; //stored this in a variable, as I may update this with a random modifier for the size change.
+    public GameObject pickupEffect; //visual effect
     public GameObject paddle;
     void OnTriggerEnter(Collider other)
     {
